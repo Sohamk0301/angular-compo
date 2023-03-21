@@ -1,16 +1,32 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<p>Start editing to see some magic happen :)</p>
 
 <h1>implementing structural directives</h1>
 <ul *ngFor="let cname of courseNames">
-<li>{{cname}}</li>
+  <li>{{ cname }}</li>
 </ul>
 
 <h2>ngFor with Index</h2>
 <div>
-<ul *ngFor="let cname of courseNames; index as i">
-<li>{{i}}] {{cname}}</li>
-</ul>
+  <ul *ngFor="let cname of courseNames; index as i">
+    <li>{{ i }}] {{ cname }}</li>
+  </ul>
+</div>
+
+<h2>
+  ngFor along with first---indicats whether it is first element or not (returns
+  true or false)
+</h2>
+<div>
+  <ul *ngFor="let cname of courseName; first as f"></ul>
+  <li>{{ f }} {{ cname }}</li>
+</div>
+
+<h2>
+  ngFor along with last---indicats whether it is last element or not (returns
+  true or false)
+</h2>
+<div>
+  <ul *ngFor="let cname of courseName; last as l"></ul>
+  <li>{{ l }} {{ cname }}</li>
 </div>
