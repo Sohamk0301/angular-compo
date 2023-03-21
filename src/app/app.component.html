@@ -30,3 +30,17 @@
   <ul *ngFor="let cname of courseName; last as l"></ul>
   <li>{{ l }} {{ cname }}</li>
 </div>
+
+<h2>ngFor along with odd displays odd element as true index wise</h2>
+<div>
+  <ul *ngFor="let cname of courseName; odd as o">
+    <li>{{ o }} {{ cname }}</li>
+  </ul>
+</div>
+
+<h2>ngFor along with even displays even element as true index wise</h2>
+<div>
+  <ul *ngFor="let cname of courseName; even as e">
+    <li>{{ e }} {{ cname }}</li>
+  </ul>
+</div>
